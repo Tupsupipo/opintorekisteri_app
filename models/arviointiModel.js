@@ -28,12 +28,10 @@ const arviointi = {
       callback
     );
   },
-  
+
   suoritukset: function(id, callback) {
      return db.query(
-        'CALL HaeSuoritukset(?)',
-        [id], 
-        callback   
+        'CALL HaeSuoritukset(?)', [id], callback   
      );
   }
 };
