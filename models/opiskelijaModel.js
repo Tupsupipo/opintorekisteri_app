@@ -11,7 +11,7 @@ const opiskelija = {
 
   add: function(opiskelija, callback) {
     return db.query(
-      'insert into opiskelija (etunimi,sukunimi,osoite,luokkatunnus) values(?,?,?)',
+      'insert into opiskelija (etunimi,sukunimi,osoite,luokkatunnus) values(?,?,?,?)',
       [opiskelija.etunimi, opiskelija.sukunimi, opiskelija.osoite, opiskelija.luokkatunnus],
       callback
     );
