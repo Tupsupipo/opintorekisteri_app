@@ -1,4 +1,4 @@
-const db = require('../database');
+const db = require('../database.js');
 
 const opiskelija = {
   getAll: function(callback) {
@@ -23,10 +23,12 @@ const opiskelija = {
 
   update: function(id, opiskelija, callback) {
     return db.query(
-      'update opiskelija set etunimi=?, set sukunimi=?, author=?, isbn=? where id_opiskelija=?',
-      [opiskelija.etunimi, opiskelija.sukunimi, opiskelija.author, opiskelija.isbn, id],
+      'update opiskelija set etunimi=?, set sukunimi=?, osoite=?, luokkatunnus=? where id_opiskelija=?',
+      [opiskelija.etunimi, opiskelija.sukunimi, opiskelija.osoite, opiskelija.luokkatunnus, id],
       callback
     );
   }
 };
 module.exports = opiskelija;
+
+

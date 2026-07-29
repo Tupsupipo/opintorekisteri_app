@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const opiskelija = require('../models/opiskelijaModel');
+const opiskelija = require('../models/opiskelijaModel.js');
 
 //Haetaan KAIKKI opiskelijat
 router.get('/',
