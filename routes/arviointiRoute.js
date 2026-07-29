@@ -66,7 +66,7 @@ function(request, response) {
 //Näytetään kaikki opiskelijan arvioinnit aliohjelman avulla
 router.get('/haesuoritukset/:id', 
 function(request, response) {
-  arviointi.update(request.params.id, request.body, function(err, dbResult) {
+  arviointi.suoritukset(request.params.id, function(err, dbResult) {
     if (err) {
       response.json(err);
     } else {
