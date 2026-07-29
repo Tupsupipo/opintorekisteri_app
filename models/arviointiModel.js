@@ -11,7 +11,7 @@ const arviointi = {
 
   add: function(arviointi, callback) {
     return db.query(
-      'insert into arviointi (paivays, arvosana, opintojakso_id, opiskelija_id) values(?,?,?,?)',
+      'insert into arviointi (paivays, arvosana, opintojakso_id, opiskelija_id) values(?,?,?)',
       [arviointi.arvosana, arviointi.opintojakso_id, arviointi.opiskelija_id],
       callback
     );
