@@ -16,14 +16,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-####
-app.post('/',
-    function(request,response){
-        response.send(request.body);
-        console.log(request.body);
-    }
-);
-####
+app.use('/api/opiskelija', require('./routes/opiskelijaRoutes'));
 
 module.exports = app;
