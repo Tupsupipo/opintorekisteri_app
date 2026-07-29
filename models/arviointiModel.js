@@ -11,7 +11,7 @@ const arviointi = {
 
   add: function(arviointi, callback) {
     return db.query(
-      'insert into arviointi (paivays, arvosana, opintojakso_id, opiskelija_id) values(?,?,?)',
+      'insert into arviointi (paivays, arvosana, opintojakso_id, opiskelija_id) values(CURDATE(),?,?,?)',
       [arviointi.arvosana, arviointi.opintojakso_id, arviointi.opiskelija_id],
       callback
     );
@@ -23,7 +23,7 @@ const arviointi = {
 
   update: function(id, arviointi, callback) {
     return db.query(
-      'update arviointi set paivays=?, arvosana=?, opintojakso_id=?, opiskelija_id=? where id_arviointi=?',
+      'update arviointi set paivays=CURDATE(), arvosana=?, opintojakso_id=?, opiskelija_id=? where id_arviointi=?',
       [arviointi.arvosana, arviointi.opintojakso_id, arviointi.opiskelija_id, id],
       callback
     );
