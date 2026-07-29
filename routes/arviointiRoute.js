@@ -63,4 +63,16 @@ function(request, response) {
   });
 });
 
+//Näytetään kaikki opiskelijan arvioinnit aliohjelman avulla
+router.get('/haesuoritukset/:id', 
+function(request, response) {
+  arviointi.update(request.params.id, request.body, function(err, dbResult) {
+    if (err) {
+      response.json(err);
+    } else {
+      response.json(dbResult);
+    }
+  });
+});
+
 module.exports = router;

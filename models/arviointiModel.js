@@ -27,6 +27,14 @@ const arviointi = {
       [arviointi.arvosana, arviointi.opintojakso_id, arviointi.opiskelija_id, id],
       callback
     );
+  },
+  
+  suoritukset: function(id, callback) {
+     return db.query(
+        'CALL HaeSuoritukset(?)',
+        [id], 
+        callback   
+     );
   }
 };
 module.exports = arviointi;
