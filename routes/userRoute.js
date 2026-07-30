@@ -30,10 +30,8 @@ function(request, response) {
   user.add(request.body, function(err, dbResult) {
     if (err) {
       response.json(err);
-      console.log("POST BODY:", request.body);//
     } else {
       response.json(dbResult); 
-      console.log("POST BODY:", request.body);//
     }
   });
 });
