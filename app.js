@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var opiskelijaRouter = require('./routes/opiskelijaRoute');
 var opintojaksoRouter = require('./routes/opintojaksoRoute');
 var arviointiRouter = require('./routes/arviointiRoute');
-var userRouter = require('./routes/userRoute');
+var userRoute = require('./routes/userRoute');
 var app = express();
 
 app.use(logger('dev'));
