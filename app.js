@@ -4,10 +4,11 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+
 var opiskelijaRouter = require('./routes/opiskelijaRoute');
 var opintojaksoRouter = require('./routes/opintojaksoRoute');
 var arviointiRouter = require('./routes/arviointiRoute');
+var userRouter = require('./routes/userRoute');
 var app = express();
 
 app.use(logger('dev'));
@@ -17,8 +18,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/users', userRouter);
 app.use('/opiskelija', opiskelijaRouter);
 app.use('/opintojakso', opintojaksoRouter);
 app.use('/arviointi', arviointiRouter);
+
 module.exports = app;
