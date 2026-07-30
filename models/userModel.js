@@ -2,6 +2,7 @@ const db = require('../database');
 const bcrypt = require('bcryptjs');
 
 const saltRounds=10;
+
 const user={
   getAll: function(callback) {
     return db.query('select * from user', callback);
@@ -14,7 +15,7 @@ const user={
       if (err) { 
         return callback(err.message);
       }
-      return db.query('insert into user (username, password) values(?,?)',
+      return db.query('insert into user (username, password_hash) values(?,?)',
       [user.username, hash], callback);
     });
   },
@@ -26,7 +27,7 @@ const user={
       if (err) { 
         return callback(err.message);
       }
-      return db.query('update user set username=?, password=? where username=?',
+      return db.query('update user set username=?, password_hash=? where username=?',
       [user.username, hash, uname], callback);
     });
   }
