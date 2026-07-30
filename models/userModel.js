@@ -14,9 +14,11 @@ const user={
     bcrypt.hash(user.password, saltRounds, function(err, hash) {
       if (err) { 
         return callback(err.message);
+        console.log("REQUEST BODY:", user);//
       }
       return db.query('insert into user (username, password_hash) values(?,?)',
       [user.username, hash], callback);
+      console.log("REQUEST BODY:", user);//
     });
   },
   delete: function(uname, callback) {
