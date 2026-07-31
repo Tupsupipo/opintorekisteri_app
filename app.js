@@ -22,14 +22,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', userRouter);
-
 app.use('/login', loginRouter); //login is not protected 
-
 app.use(authenticateToken); //all routes below this line are protected
 
 app.use('/opiskelija', opiskelijaRouter);
 app.use('/opintojakso', opintojaksoRouter);
 app.use('/arviointi', arviointiRouter);
+
 
 // Middleware function that verifies JWT token and blocks unauthorized requests
 function authenticateToken(request, response, next) {
