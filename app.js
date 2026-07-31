@@ -7,6 +7,7 @@ const jwt = require('jsonwebtoken');
 var indexRouter = require('./routes/index');
 
 var userRouter = require('./routes/userRoute');
+var loginRouter = require('./routes/login');
 
 var opiskelijaRouter = require('./routes/opiskelijaRoute');
 var opintojaksoRouter = require('./routes/opintojaksoRoute');
