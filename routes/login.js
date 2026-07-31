@@ -17,7 +17,7 @@ router.post('/',
           }
           else{
             if (dbResult.length > 0) {
-              bcrypt.compare(password,dbResult[0].password, function(err,compareResult) {
+              bcrypt.compare(password,dbResult[0].password_hash, function(err,compareResult) {
                 if(err){
                   console.log("Bcrypt compare error");
                   return response.status(500).json({"message":"Internal error"});

@@ -36,7 +36,7 @@ const user={
     });
   },
   checkPassword: function(username, callback) {
-  return db.query('SELECT password FROM user WHERE username = ?',[username], callback); 
+  return db.query('SELECT password_hash FROM user WHERE username = ?',[username], callback); 
 }
 
 }
