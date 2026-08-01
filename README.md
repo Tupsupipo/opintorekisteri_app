@@ -40,3 +40,5 @@ Tietokannasta löytyy myös aliohjelma "CALL hae_suoritukset(opiskelija_id);", j
 ## Tietokannan ER-diagrammi:
 
 ![ER‑diagrammi](ER-diagram.png)
+
+## Linkki esittelyvideoon: https://youtu.be/4vHWRWDwwuw
