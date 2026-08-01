@@ -34,7 +34,7 @@ POST            Tietueen lisääminen tietokantaan.
 DELETE          Tietueen poistaminen ID:n perusteella.              
 PUT             Tietueen päivittäminen ID:n perusteella.            
 
-Tietokannasta löytyy myös aliohjelma "CALL hae_suoritukset(opiskelija_id);", jolla voidaan hakea kaikki tietyn opiskelijan suoritukset opiskelija_id:n avulla. Tätä voidaan käyttää API-kutsulla GET /haesuoritukset/<id>
+Tietokannasta löytyy myös aliohjelma "CALL hae_suoritukset(opiskelija_id);", jolla voidaan hakea kaikki tietyn opiskelijan suoritukset opiskelija_id:n avulla. Tätä voidaan käyttää API-kutsulla GET arviointi/haesuoritukset/<id>
 
 
 ## Tietokannan ER-diagrammi:
