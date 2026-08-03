@@ -8,12 +8,12 @@ Projektissa käytetään MVC-arkkitehtuuria, JWT-autentikointia ja bcrypt salaus
 
 Tietokanta on suojattu token-autentikoinnilla. Sovellusta käyttääkseen on luotava käyttäjä user tauluun POST /user
 Sisään kirjautuminen tapahtuu POST /login kautta, johon on lähetettävä tunnukset ja salasana .json formaatissa:
-'''
+```
 {
     "username":"uname",
     "password":"passw"
 }
-'''
+```
 Vastauksena saat JWT-tokenin, joka sinun on lisättävä headerina mukaan kaikkiin pyyntöihin:
 Authorization Bearer <token>
 
