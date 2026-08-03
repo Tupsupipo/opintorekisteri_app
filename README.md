@@ -8,10 +8,12 @@ Projektissa käytetään MVC-arkkitehtuuria, JWT-autentikointia ja bcrypt salaus
 
 Tietokanta on suojattu token-autentikoinnilla. Sovellusta käyttääkseen on luotava käyttäjä user tauluun POST /user
 Sisään kirjautuminen tapahtuu POST /login kautta, johon on lähetettävä tunnukset ja salasana .json formaatissa:
+'''
 {
     "username":"uname",
     "password":"passw"
 }
+'''
 Vastauksena saat JWT-tokenin, joka sinun on lisättävä headerina mukaan kaikkiin pyyntöihin:
 Authorization Bearer <token>
 
@@ -42,3 +44,4 @@ Tietokannasta löytyy myös aliohjelma "CALL hae_suoritukset(opiskelija_id);", j
 ![ER‑diagrammi](ER-diagram.png)
 
 ## Linkki esittelyvideoon: https://youtu.be/4vHWRWDwwuw
+Sovellus pyörii toistaiseksi videolla näkyvässä IP-osoitteessa.
